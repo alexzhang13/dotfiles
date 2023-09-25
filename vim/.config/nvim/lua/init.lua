@@ -11,6 +11,9 @@ function imap(shortcut, command)
   map('i', shortcut, command)
 end
 
+-- Extra settings
+vim.wo.relativenumber = true
+
 require('telescope').setup{
   defaults = {
     -- Default configuration for telescope goes here:
@@ -34,6 +37,13 @@ require('telescope').setup{
     -- builtin picker
   },
   extensions = {
+      media_files = {
+      -- filetypes whitelist
+      -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
+      filetypes = {"gif", "png", "webp", "jpg", "jpeg"},
+      -- find command (defaults to `fd`)
+      find_cmd = "rg"
+    }
     -- Your extension configuration goes here:
     -- extension_name = {
     --   extension_config_key = value,
