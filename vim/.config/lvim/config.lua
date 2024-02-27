@@ -4,6 +4,9 @@
 -- Discord: https://discord.com/invite/Xb9B4Ny
 --
 
+-- default vim settings
+vim.opt.relativenumber = true -- relative line numbers
+-- default settings
 lvim.log.level = "warn"
 lvim.format_on_save = true
 
@@ -15,7 +18,9 @@ lvim.lsp.buffer_mappings.normal_mode['gk'] = { vim.lsp.buf.hover, "Show document
 lvim.lsp.buffer_mappings.normal_mode['K'] = nil
 lvim.keys.normal_mode["J"] = "3j"
 lvim.keys.normal_mode["K"] = "3k"
-
-
+lvim.keys.visual_mode["J"] = "3j"
+lvim.keys.visual_mode["K"] = "3k"
+lvim.keys.normal_mode["|"] = ":vsplit<CR>"
+lvim.keys.normal_mode["-"] = ":split<CR>"
 -- colors
 -- additional plugins
