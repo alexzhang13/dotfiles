@@ -4,7 +4,10 @@ set nocompatible
 syntax on
 
 " Set tab spacing
-set tabstop=4
+set tabstop=8
+set softtabstop=0
+set shiftwidth=4 smarttab
+set expandtab
 
 " Disable the default Vim startup message.
 set shortmess+=I
@@ -29,4 +32,6 @@ set incsearch
 " Remap for my liking
 nnoremap J 3j
 nnoremap K 3k
+vnoremap J 3j
+vnoremap K 3k
 
